@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Fragment} from "react"
 import { Container } from "react-bootstrap"
 import { useFolder } from "../../hooks/useFolder"
 import AddFolderButton from "./AddFolderButton"
@@ -15,7 +15,7 @@ export default function Dashboard() {
   const { folder, childFolders, childFiles } = useFolder(folderId, state.folder)
 
   return (
-    <>
+    <Fragment>
       <Navbar />
       <Container fluid>
         <div className="d-flex align-items-center">
@@ -51,6 +51,6 @@ export default function Dashboard() {
           </div>
         )}
       </Container>
-    </>
+    </Fragment>
   )
 }

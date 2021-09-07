@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, Fragment } from "react"
 import ReactDOM from "react-dom"
 import { faFileUpload } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -87,7 +87,7 @@ export default function AddFileButton({ currentFolder }) {
   }
 
   return (
-    <>
+    <Fragment>
       <label className="btn btn-outline-success btn-sm m-0 mr-2">
         <FontAwesomeIcon icon={faFileUpload} />
         <input
@@ -140,6 +140,6 @@ export default function AddFileButton({ currentFolder }) {
           </div>,
           document.body
         )}
-    </>
+    </Fragment>
   )
 }
